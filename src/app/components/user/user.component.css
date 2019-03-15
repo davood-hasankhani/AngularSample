@@ -1,0 +1,27 @@
+.region
+{
+    margin: 30px;
+    
+}
+.btnStyle
+{
+    margin-bottom: 4px;
+}
+.modelRow
+{
+    margin-bottom:10px; 
+}
+.userDetailsR
+{
+    width: 49%;
+    float: right;
+}
+.userDetailsL
+{
+    width: 49%;
+    float: Left;
+}
+.userDetails
+{
+    height: -webkit-fill-available;
+}

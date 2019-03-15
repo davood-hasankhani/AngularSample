@@ -1,0 +1,20 @@
+<p>
+  posts works!
+</p>
+
+<h4>Posts </h4>
+<div *ngFor="let post of postse">
+  <label> title {{post.id}} : {{post.title}}</label>
+  <br>
+  <label> body {{post.id}} : {{post.body}}</label>
+  <!-- <div *ngFor = "let comment of comments ">
+    <div *ngIf="(post?.id == comment?.postId ")>
+      <label>Name: {{comment.name}}</label>
+      <br>
+      <label>Comment: {{comment.body}}</label>
+    </div>
+  </div> -->
+  <br>
+  <br>
+</div>
+

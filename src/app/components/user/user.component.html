@@ -1,0 +1,97 @@
+
+<div class="container">
+<div class="row">
+  <div class="col-md-3">
+
+  </div>
+  <div *ngIf=isEdit class="col-md-9">
+      <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Last Name</th>
+              <th scope="col">Birthday</th>
+              <th scope="col">Phone</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr >
+
+              <td>{{address.name}}</td>
+              <td>{{address.lastName}}</td>
+              <td>{{address.birthDay}}</td>
+              <th >{{address.phone}}</th>
+            </tr>
+    
+          </tbody>
+        </table>
+  </div>
+</div>
+ 
+</div>
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-3">
+
+          <form >
+        
+              <div class="modelRow">
+                <label for="name">Name:</label>
+                <br>
+                <input type="text" [(ngModel)]="formsDetail.name" name="name">
+              </div>
+              <div class="modelRow">
+                <label for="lastName">lastName:</label>
+                <br>
+                <input type="text" [(ngModel)]="formsDetail.lastName" name="lastName">
+              </div>
+              <div class="modelRow">
+                <label for="birthDay">birthDay:</label>
+                <br>
+                <input type="text" [(ngModel)]="formsDetail.birthDay" name="birthDay">
+              </div>
+              <div class="modelRow">
+                <label for="phone">phone:</label>
+                <br>
+                <input type="text" [(ngModel)]="formsDetail.phone" name="phone">
+              </div>
+              <br>
+              <button class="btn btn-secondory " (click)="addformDetail(formsDetail)">+ </button>
+              <button #editbtn (click)="toggle(formsDetail)" class="btn btn-search" >Search</button>
+              <br>
+              <br>
+          </form>
+
+  </div>
+  <div class="col-md-9">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Last Name</th>
+          <th scope="col">Birthday</th>
+          <th scope="col">Phone</th>
+          <th scope="col">Edit</th>
+          <th scope="col">Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let hobb of formsDetail; let i=index">
+
+          <td>{{hobb.name}}</td>
+          <td>{{hobb.lastName}}</td>
+          <td>{{hobb.birthDay}}</td>
+          <th >{{hobb.phone}}</th>
+          <td><button class="btn btn-edit glyphicon glyphicon-pencil " (click)="editHobby(hobb)">e </button></td>
+          <td><button class="btn btn-secondory " (click)="deleteHobby(hobb)">X </button></td>         
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+</div>
